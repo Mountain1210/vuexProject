@@ -5,7 +5,7 @@
 <input type="button" value="偶数才能点击"  @click="clickOdd"/> 
 <input type="button" value="异步添加"  @click="clickAsync"/> 
 <div>
-  现在的数字为：{{count}}
+  现在的数字为：{{count}},它现在是{{getOdd}}
 </div>
 
 
@@ -19,7 +19,7 @@ import {mapGetters,mapActions} from "vuex"
 console.log(mapActions)
 export default {
 computed:mapGetters([
-  'count'
+  'count','getOdd'
 ]),
   methods:mapActions([
       'increment',"deincrement","clickOdd","clickAsync"
